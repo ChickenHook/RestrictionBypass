@@ -1,0 +1,3 @@
+rootProject.name='RestrictionBypass'
+include ':app'
+include ':restrictionbypass'
