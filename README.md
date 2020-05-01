@@ -25,7 +25,6 @@ allprojects {
         implementation 'com.github.ChickenHook:RestrictionBypass:1.0'
    }
 ```
-Or take the prebuilt aar library: [restrictionbypass.aar](prebuild/restrictionbypass.aar)
 
 
 ## Examples
