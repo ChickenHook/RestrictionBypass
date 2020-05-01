@@ -14,7 +14,7 @@ Android API 19 - 30
 
 Just take the maven repository:
 
-```kt
+```groovy
 allprojects {
         repositories {
             jcenter()
@@ -23,8 +23,8 @@ allprojects {
    }
    dependencies {
         implementation 'com.github.ChickenHook:RestrictionBypass:1.0'
-   }```
-
+   }
+```
 Or take the prebuilt aar library: [restrictionbypass.aar](prebuild/restrictionbypass.aar)
 
 
