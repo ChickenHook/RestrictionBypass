@@ -72,8 +72,15 @@ Call with RestrictionBypass
 Just take the maven repository:
 
 ```
-WIP
-```
+allprojects {
+        repositories {
+            jcenter()
+            maven { url "https://jitpack.io" }
+        }
+   }
+   dependencies {
+        implementation 'com.github.ChickenHook:RestrictionBypass:1.0'
+   }```
 
 Or take the prebuilt aar library: [restrictionbypass.aar](prebuild/restrictionbypass.aar)
 
