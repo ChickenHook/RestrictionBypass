@@ -15,7 +15,7 @@ Android API 19 - 30
 
 Original reflection call
 
-```
+```kt
         Class.forName("android.app.ActivityThread").getDeclaredField(
             "mResourcesManager"
         )
@@ -23,7 +23,7 @@ Original reflection call
 
 Call with RestrictionBypass
 
-```
+```kt
             RestrictionBypass.getDeclaredField(
                 Class.forName("android.app.ActivityThread"),
                 "mResourcesManager"
@@ -36,14 +36,14 @@ Call with RestrictionBypass
 Original reflection call
 
 
-```
+```kt
         Class.forName("android.app.ActivityThread").getMethod(
             "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
         )
 ```
 Call with RestrictionBypass
 
-```
+```kt
             RestrictionBypass.getMethod(
                 Class.forName("android.app.ActivityThread"),
                 "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
@@ -53,14 +53,14 @@ Call with RestrictionBypass
 #### getDeclaredMethod(...)
 Original reflection call
 
-```
+```kt
         Class.forName("android.app.ActivityThread").getDeclaredMethod(
             "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
         )
 ```
 Call with RestrictionBypass
 
-```
+```kt
             RestrictionBypass.getDeclaredMethod(
                 Class.forName("android.app.ActivityThread"),
                 "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
@@ -71,7 +71,7 @@ Call with RestrictionBypass
 
 Just take the maven repository:
 
-```
+```kt
 allprojects {
         repositories {
             jcenter()
