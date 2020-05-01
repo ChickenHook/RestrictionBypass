@@ -12,21 +12,24 @@ Android API 19 - 30
 
 ## Integration
 
-Just take the maven repository:
+Just include the maven repository
 
+1) In your root build.gradle:
 ```groovy
 allprojects {
         repositories {
+            [..]
             jcenter()
             maven { url "https://jitpack.io" }
         }
    }
+```
+2) In your library/build.gradle add:
+```groovy
    dependencies {
         implementation 'com.github.ChickenHook:RestrictionBypass:1.0'
    }
 ```
-
-
 ## Examples
 
 #### getDeclaredField(...)
