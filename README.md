@@ -9,6 +9,25 @@ Small library to access hidden API restricted by https://developer.android.com/d
 
 Android API 19 - 30
 
+
+## Integration
+
+Just take the maven repository:
+
+```kt
+allprojects {
+        repositories {
+            jcenter()
+            maven { url "https://jitpack.io" }
+        }
+   }
+   dependencies {
+        implementation 'com.github.ChickenHook:RestrictionBypass:1.0'
+   }```
+
+Or take the prebuilt aar library: [restrictionbypass.aar](prebuild/restrictionbypass.aar)
+
+
 ## Examples
 
 #### getDeclaredField(...)
@@ -66,22 +85,5 @@ Call with RestrictionBypass
                 "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
             )
 ```
-
-## Integration
-
-Just take the maven repository:
-
-```kt
-allprojects {
-        repositories {
-            jcenter()
-            maven { url "https://jitpack.io" }
-        }
-   }
-   dependencies {
-        implementation 'com.github.ChickenHook:RestrictionBypass:1.0'
-   }```
-
-Or take the prebuilt aar library: [restrictionbypass.aar](prebuild/restrictionbypass.aar)
 
 ## Troubleshooting
