@@ -2,6 +2,7 @@ package org.chickenhook.restrictionbypass.app
 
 import junit.framework.Assert.assertNotNull
 import org.chickenhook.restrictionbypass.RestrictionBypass
+import org.chickenhook.restrictionbypass.Unseal
 import org.junit.Test
 
 class KotlinExamples {
@@ -40,4 +41,13 @@ class KotlinExamples {
             )
         )
     }
+
+    @Test
+    fun invokeGetPackageInfoWithUnsealApiBypass() {
+        Unseal.unseal()
+        Class.forName("android.app.ActivityThread").getMethod(
+            "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
+        )
+    }
+
 }
