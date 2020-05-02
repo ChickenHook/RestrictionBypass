@@ -5,6 +5,8 @@ Android API restriction bypass for all Android Versions
 
 Small library to access hidden API restricted by https://developer.android.com/distribute/best-practices/develop/restrictions-non-sdk-interfaces
 
+More technical details can be found: https://wordpress.com/stats/day/androidreverse.wordpress.com?tab=visitors
+
 ## Supported Android Versions
 
 Android API 19 - 30
