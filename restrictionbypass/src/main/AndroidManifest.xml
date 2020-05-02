@@ -5,7 +5,7 @@
     <application>
         <provider
             android:name=".BypassProvider"
-            android:authorities="org.chickenhook.restrictionbypass"
+            android:authorities="${applicationId}.restrictionbypass"
             android:enabled="true"
             android:exported="false"></provider>
     </application>
