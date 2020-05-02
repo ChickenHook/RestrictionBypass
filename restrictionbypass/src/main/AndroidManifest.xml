@@ -1,2 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.chickenhook.restrictionbypass" />
+    package="org.chickenhook.restrictionbypass">
+
+    <application>
+        <provider
+            android:name=".BypassProvider"
+            android:authorities="org.chickenhook.restrictionbypass"
+            android:enabled="true"
+            android:exported="false"></provider>
+    </application>
+
+</manifest>

@@ -27,66 +27,13 @@ allprojects {
 2) In your library/build.gradle add:
 ```groovy
    dependencies {
-        implementation 'com.github.ChickenHook:RestrictionBypass:1.0'
+        implementation 'com.github.ChickenHook:RestrictionBypass:2.0'
    }
 ```
-## Examples
+## Usage
 
-#### getDeclaredField(...)
-
-Original reflection call
-
-```kt
-        Class.forName("android.app.ActivityThread").getDeclaredField(
-            "mResourcesManager"
-        )
-```
-
-Call with RestrictionBypass
-
-```kt
-            RestrictionBypass.getDeclaredField(
-                Class.forName("android.app.ActivityThread"),
-                "mResourcesManager"
-
-            )
-```
-
-#### getMethod(...)
-
-Original reflection call
-
-
-```kt
-        Class.forName("android.app.ActivityThread").getMethod(
-            "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
-        )
-```
-Call with RestrictionBypass
-
-```kt
-            RestrictionBypass.getMethod(
-                Class.forName("android.app.ActivityThread"),
-                "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
-            )
-```
-
-#### getDeclaredMethod(...)
-Original reflection call
-
-```kt
-        Class.forName("android.app.ActivityThread").getDeclaredMethod(
-            "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
-        )
-```
-Call with RestrictionBypass
-
-```kt
-            RestrictionBypass.getDeclaredMethod(
-                Class.forName("android.app.ActivityThread"),
-                "getPackageInfo", String::class.java, Class.forName("android.content.res.CompatibilityInfo"), Integer.TYPE
-            )
-```
+Just include the library as explained in the Integration chapter.
+The BypassProvider will automatically unseal your process and allow you to access hidden api.
 
 ## Troubleshooting
 

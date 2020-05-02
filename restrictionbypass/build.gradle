@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.ChickenHook'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+group = 'com.github.ChickenHook'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -44,4 +46,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
