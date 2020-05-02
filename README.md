@@ -29,7 +29,7 @@ allprojects {
 2) In your library/build.gradle add:
 ```groovy
    dependencies {
-        implementation 'com.github.ChickenHook:RestrictionBypass:2.1'
+        implementation 'com.github.ChickenHook:RestrictionBypass:2.2'
    }
 ```
 ## Usage

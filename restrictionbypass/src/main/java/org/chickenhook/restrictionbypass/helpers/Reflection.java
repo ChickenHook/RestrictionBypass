@@ -38,4 +38,35 @@ public class Reflection {
         f.setAccessible(true);
         return (T) f.get(obj);
     }
+
+
+
+    /**
+     * Set a member of the given object
+     * @param obj containing the member
+     * @param field the member name
+     * @param value the value to be set
+     * @throws NoSuchFieldException when field was found
+     * @throws IllegalAccessException when field was not accessible
+     */
+    public static @Nullable
+    void setReflective(@NonNull Object obj, @NonNull String field, @Nullable Object value) throws NoSuchFieldException, IllegalAccessException {
+        setReflective(obj, obj.getClass(), field, value);
+    }
+
+    /**
+     * Set a member of the given object
+     * @param obj containing the member
+     * @param cls super class of the obj
+     * @param field the member name
+     * @param value the value to be set
+     * @throws NoSuchFieldException when field was found
+     * @throws IllegalAccessException when field was not accessible
+     */
+    public static @Nullable
+    void setReflective(@Nullable Object obj, @NonNull Class<?> cls, @NonNull String field, @Nullable Object value) throws NoSuchFieldException, IllegalAccessException {
+        Field f = cls.getDeclaredField(field);
+        f.setAccessible(true);
+        f.set(obj, value);
+    }
 }
