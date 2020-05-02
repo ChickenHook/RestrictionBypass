@@ -91,3 +91,14 @@ Call with RestrictionBypass
 ## Troubleshooting
 
 Please create a bug report if you find any issues. This chapter will be updated then.
+
+
+## Donate
+
+If you're happy with my library please order me a cup of coffee ;) Thanks.
+
+[
+  ![Donate with PayPal]
+  (https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)
+]
+(https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8UH5MBVYM3J36)
