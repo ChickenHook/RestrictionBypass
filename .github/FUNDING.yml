@@ -10,4 +10,4 @@ liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
 custom: # Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']
-custom: ['https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8UH5MBVYM3J36']
+custom: ['https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8UH5MBVYM3J36', 'bc1qvll2mp5ndwd4sgycu4ad2ken4clhjac7mdlcaj']
