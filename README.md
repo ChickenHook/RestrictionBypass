@@ -51,3 +51,13 @@ If you're happy with my library please order me a cup of coffee ;) Thanks.
 or
 
 bc1qvll2mp5ndwd4sgycu4ad2ken4clhjac7mdlcaj
+
+## Other Projects
+
+| Project | Description |
+|---------|-------------|
+| [ChickenHook](https://github.com/ChickenHook/ChickenHook) | A linux / android / MacOS hooking framework  |
+| [BinderHook](https://github.com/ChickenHook/BinderHook) | Library intended to hook Binder interface and manipulate events |
+| [RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) |  Android API restriction bypass for all Android Versions |
+| [AndroidManifestBypass](https://github.com/ChickenHook/AndroidManifestBypass) |  Android API restriction bypass for all Android Versions |
+| .. | |
