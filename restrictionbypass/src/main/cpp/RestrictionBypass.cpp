@@ -2,6 +2,8 @@
 #include <android/log.h>
 #include <thread>
 #include <future>
+#include <dlfcn.h>
+#include "dlopenBypass/DlOpenBypass.h"
 
 /////////////////// HELPERS
 JavaVM *_vm;
@@ -228,6 +230,36 @@ static int registerNativeMethods(JNIEnv *env, const char *className,
     return JNI_TRUE;
 }
 
+int installDlopenBypass(JNIEnv *env) {
+    if (DlOpenBypass::install(env) != nullptr) {
+        return 1;
+    }
+    return 0;
+}
+
+void *(*_dlopen)(void *, const char *__filename, int __flag) = nullptr;
+
+void test(JNIEnv *env) {
+    // place address of the new dlopen function
+    _dlopen = (void *(*)(void *, const char *__filename, int __flag)) env->functions->FatalError;
+
+#if __x86_64__ || __aarch64__
+    void *val = _dlopen((void *) &dlopen, "/system/lib64/libssl.so",
+                        RTLD_LAZY);
+#else
+    void *val = _dlopen((void *) &dlopen, "/system/lib/libssl.so",
+                        RTLD_LAZY);
+#endif
+    if (val != nullptr) {
+        __android_log_print(ANDROID_LOG_INFO, "RestrictionBypass",
+                            "Install dlopen bypass test successful! have fun!");
+    } else {
+
+        __android_log_print(ANDROID_LOG_INFO, "RestrictionBypass",
+                            "Install dlopen bypass test NOT SUCCESSFUL! Please provide logs!");
+    }
+}
+
 jint JNI_OnLoad(JavaVM *vm, void * /*reserved*/) {
     _vm = vm;
     JNIEnv *env = nullptr;
@@ -241,6 +273,15 @@ jint JNI_OnLoad(JavaVM *vm, void * /*reserved*/) {
                                sizeof(gMethods) / sizeof(gMethods[0]))) {
         return -1;
     }
+
+    if (installDlopenBypass(env) == 1) {
+        __android_log_print(ANDROID_LOG_INFO, "RestrictionBypass",
+                            "Install dlopen bypass successful.. starting test!");
+    } else {
+        __android_log_print(ANDROID_LOG_INFO, "RestrictionBypass",
+                            "Install dlopen bypass NOT SUCCESSFUL !!");
+    }
+    test(env);
 
     return JNI_VERSION_1_4;
 }
