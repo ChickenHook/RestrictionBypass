@@ -17,6 +17,7 @@ add_library( # Sets the name of the library.
         SHARED
 
         # Provides a relative path to your source file(s).
+        src/main/cpp/dlopenBypass/DlOpenBypass.cpp
         src/main/cpp/RestrictionBypass.cpp)
 
 

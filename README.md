@@ -34,8 +34,48 @@ allprojects {
 ```
 ## Usage
 
+### Java
+
 Just include the library as explained in the Integration chapter.
 The BypassProvider will automatically unseal your process and allow you to access hidden api.
+
+### C/C++
+
+The native restriction bypass will be installed automatically via the Content Provider and will give
+you the power to load any system library.
+
+No header or linked library is needed, just follow this example:
+
+```c
+void *(*_dlopen)(void *, const char *__filename, int __flag) = nullptr; // will be used to store the function to the new dlopen function
+
+void test(JNIEnv *env) {
+    // place address of the new dlopen function
+    _dlopen = (void *(*)(void *, const char *__filename, int __flag)) env->functions->FatalError;
+
+#if __x86_64__ || __aarch64__
+    void *val = _dlopen((void *) &dlopen, "/system/lib64/libssl.so",
+                        RTLD_LAZY);
+#else
+    void *val = _dlopen((void *) &dlopen, "/system/lib/libssl.so",
+                        RTLD_LAZY);
+#endif
+    if (val != nullptr) {
+        __android_log_print(ANDROID_LOG_INFO, "RestrictionBypass",
+                            "Install dlopen bypass test successful! have fun!");
+    } else {
+
+        __android_log_print(ANDROID_LOG_INFO, "RestrictionBypass",
+                            "Install dlopen bypass test NOT SUCCESSFUL! Please provide logs!");
+    }
+}
+
+```
+
+This bypass replaces the env->functions->FatalError function with instructions telling to jump to the original dlopen function. This let the VM think that
+this call is invoked from libart itself and not from you're library.
+
+If you find any bugs please create an issue in this project and provide logs as well as an coding example!
 
 ## Troubleshooting
 
