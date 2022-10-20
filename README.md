@@ -54,10 +54,11 @@ bc1qvll2mp5ndwd4sgycu4ad2ken4clhjac7mdlcaj
 
 ## Other Projects
 
-| Project | Description |
-|---------|-------------|
-| [ChickenHook](https://github.com/ChickenHook/ChickenHook) | A linux / android / MacOS hooking framework  |
-| [BinderHook](https://github.com/ChickenHook/BinderHook) | Library intended to hook Binder interface and manipulate events |
-| [RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) |  Android API restriction bypass for all Android Versions |
-| [AndroidManifestBypass](https://github.com/ChickenHook/AndroidManifestBypass) |  Android API restriction bypass for all Android Versions |
-| .. | |
+| Project                                                                                 | Description                                                                       |
+|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [ChickenHook](https://github.com/ChickenHook/ChickenHook)                               | A linux / android / MacOS hooking framework                                       |
+| [BinderHook](https://github.com/ChickenHook/BinderHook)                                 | Library intended to hook Binder interface and manipulate events                   |
+| [RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass)                   | Android API restriction bypass for all Android Versions                           |
+| [AndroidManifestBypass](https://github.com/ChickenHook/AndroidManifestBypass)           | Android API restriction bypass for all Android Versions                           |
+| [AndroidSystemServicePenetration](https://github.com/ChickenHook/AndroidSystemServicePenetration) | A project where we document and list Exploits and Bugs of Android System services |
+| ..                                                                                      |                                                                                   |
