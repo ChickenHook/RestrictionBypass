@@ -9,7 +9,7 @@ More technical details can be found: https://wordpress.com/stats/day/androidreve
 
 ## Supported Android Versions
 
-Android API 19 - 30
+Android API 19 - 33
 
 
 ## Integration
