@@ -5,7 +5,7 @@ Android API restriction bypass for all Android Versions
 
 ** NEW VIDEO DESCRIPTION UPLOADED**
 
-[![BinderFuzzy](https://yt-embed.herokuapp.com/embed?v=91aobT-RHz)](https://www.youtube.com/watch?v=4uXdXq7E2Uw "BinderFuzzy")
+[![BinderFuzzy](https://yt-embed.herokuapp.com/embed?v=91aobT-RHzY)](https://www.youtube.com/watch?v=4uXdXq7E2Uw "BinderFuzzy")
 
 
 [![RestrictionBypass](https://yt-embed.herokuapp.com/embed?v=91aobT-RHzY)](https://www.youtube.com/watch?v=91aobT-RHzY "RestrictionBypass")
