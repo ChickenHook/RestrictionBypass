@@ -5,6 +5,8 @@ Android API restriction bypass for all Android Versions
 
 [![RestrictionBypass](https://yt-embed.herokuapp.com/embed?v=91aobT-RHzY)](https://www.youtube.com/watch?v=91aobT-RHzY "RestrictionBypass")
 
+[![BinderFuzzy](https://yt-embed.herokuapp.com/embed?v=4uXdXq7E2Uw)](https://www.youtube.com/watch?v=4uXdXq7E2Uw "BinderFuzzy")
+
 
 Small library to access hidden API restricted by https://developer.android.com/distribute/best-practices/develop/restrictions-non-sdk-interfaces
 
