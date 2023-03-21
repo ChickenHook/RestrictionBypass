@@ -1,8 +1,9 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'maven-publish'
+
 group = 'com.github.ChickenHook'
 android {
     compileSdkVersion 33
@@ -40,6 +41,14 @@ android {
         cmake {
             path "CMakeLists.txt"
             version "3.10.2"
+        }
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
         }
     }
 }
