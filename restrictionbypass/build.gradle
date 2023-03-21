@@ -5,17 +5,17 @@ apply plugin: 'kotlin-android-extensions'
 group = 'com.github.ChickenHook'
 android {
     compileSdkVersion 33
-    buildToolsVersion "33.0.0"
-    ndkVersion "22.1.7171670"
+    buildToolsVersion "30.0.3"
+    ndkVersion '22.1.7171670'
     compileOptions {
-        sourceCompatibility 1.8
-        targetCompatibility 1.8
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -38,7 +38,7 @@ android {
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
-            version "3.6.0"
+            version "3.10.2"
         }
     }
 }
@@ -46,9 +46,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     // implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
