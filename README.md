@@ -46,6 +46,8 @@ The BypassProvider will automatically unseal your process and allow you to acces
 
 Please create a bug report if you find any issues. This chapter will be updated then.
 
+## R8 / Proguard
+The specific rules are [already bundled](restrictionbypass/consumer-rules.pro) into the aar which can be interpreted by R8 automatically.
 
 ## Donate
 
