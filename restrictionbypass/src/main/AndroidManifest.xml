@@ -6,8 +6,7 @@
         <provider
             android:name=".BypassProvider"
             android:authorities="${applicationId}.restrictionbypass"
-            android:enabled="true"
-            android:exported="false"></provider>
+            android:exported="false" />
     </application>
 
 </manifest>

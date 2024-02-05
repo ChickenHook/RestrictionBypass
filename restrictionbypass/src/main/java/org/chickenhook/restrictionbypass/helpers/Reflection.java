@@ -1,8 +1,5 @@
 package org.chickenhook.restrictionbypass.helpers;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.lang.reflect.Field;
 
 public class Reflection {
@@ -17,8 +14,8 @@ public class Reflection {
      * @throws NoSuchFieldException when field was found
      * @throws IllegalAccessException when field was not accessible
      */
-    public static @Nullable
-    <T> T getReflective(@NonNull Object obj, @NonNull String field) throws NoSuchFieldException, IllegalAccessException {
+    public static
+    <T> T getReflective(Object obj, String field) throws NoSuchFieldException, IllegalAccessException {
         return getReflective(obj, obj.getClass(), field);
     }
 
@@ -32,8 +29,8 @@ public class Reflection {
      * @throws NoSuchFieldException when field was found
      * @throws IllegalAccessException when field was not accessible
      */
-    public static @Nullable
-    <T> T getReflective(@Nullable Object obj, @NonNull Class<?> cls, @NonNull String field) throws NoSuchFieldException, IllegalAccessException {
+    public static
+    <T> T getReflective(Object obj, Class<?> cls, String field) throws NoSuchFieldException, IllegalAccessException {
         Field f = cls.getDeclaredField(field);
         f.setAccessible(true);
         return (T) f.get(obj);
@@ -49,8 +46,8 @@ public class Reflection {
      * @throws NoSuchFieldException when field was found
      * @throws IllegalAccessException when field was not accessible
      */
-    public static @Nullable
-    void setReflective(@NonNull Object obj, @NonNull String field, @Nullable Object value) throws NoSuchFieldException, IllegalAccessException {
+    public static
+    void setReflective(Object obj, String field, Object value) throws NoSuchFieldException, IllegalAccessException {
         setReflective(obj, obj.getClass(), field, value);
     }
 
@@ -63,8 +60,8 @@ public class Reflection {
      * @throws NoSuchFieldException when field was found
      * @throws IllegalAccessException when field was not accessible
      */
-    public static @Nullable
-    void setReflective(@Nullable Object obj, @NonNull Class<?> cls, @NonNull String field, @Nullable Object value) throws NoSuchFieldException, IllegalAccessException {
+    public static
+    void setReflective(Object obj, Class<?> cls, String field, Object value) throws NoSuchFieldException, IllegalAccessException {
         Field f = cls.getDeclaredField(field);
         f.setAccessible(true);
         f.set(obj, value);
