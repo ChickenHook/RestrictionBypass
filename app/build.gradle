@@ -1,15 +1,17 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    namespace "org.chickenhook.restrictionbypass.app"
+    compileSdk 34
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
         applicationId "org.chickenhook.restrictionbypass.app"
-        minSdkVersion 19
-        targetSdkVersion 33
+        minSdk 19
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
