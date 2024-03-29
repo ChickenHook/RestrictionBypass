@@ -39,6 +39,11 @@ android {
             version "3.10.2"
         }
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
     publishing {
         singleVariant("release") {
             withSourcesJar()
