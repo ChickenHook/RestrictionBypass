@@ -38,6 +38,12 @@ android {
         buildConfig = true
     }
 
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
     publishing {
         singleVariant("release") {
             withSourcesJar()
