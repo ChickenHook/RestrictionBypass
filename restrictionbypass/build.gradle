@@ -33,12 +33,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
-            version "3.10.2"
-        }
-    }
 
     buildFeatures {
         buildConfig = true
