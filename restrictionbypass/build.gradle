@@ -45,7 +45,9 @@ android {
 publishing {
     publications {
         maven(MavenPublication) {
-            from components.release
+            afterEvaluate {
+                from components.release
+            }
         }
     }
 }
