@@ -8,6 +8,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    tasks.withType(KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs += [
+                    "-Xjvm-default=all"
+            ]
+        }
+    }
     defaultConfig {
         applicationId "org.chickenhook.restrictionbypass.app"
         minSdk 19
