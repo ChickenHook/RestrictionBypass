@@ -1,7 +1,4 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'maven-publish'
 
 group = 'com.github.ChickenHook'
@@ -48,7 +45,7 @@ android {
 publishing {
     publications {
         maven(MavenPublication) {
-            from components.java
+            from components.release
         }
     }
 }
